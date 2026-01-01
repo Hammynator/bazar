@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--pico-background-color);
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    padding: 0;
+}
+
+nav ul li {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: none;
+}
+
+nav ul li strong a {
+    color: var(--pico-color);
+    text-decoration: none;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: var(--pico-border-radius);
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 { color: white; margin-bottom: 0.5rem; }
+
+table[role="grid"] tbody tr {
+    transition: transform 0.2s ease;
+}
+
+table[role="grid"] tbody tr:hover {
+    transform: scale(1.01);
+    background: rgba(46, 125, 50, 0.05);
+}
+
+.grid > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid article {
+    flex: 1;
+}
