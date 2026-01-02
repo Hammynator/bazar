@@ -1,11 +1,41 @@
-.animate-pulse-slow {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+html, body {
+    overscroll-behavior-x: none;
+    overflow-x: clip;
 }
-@keyframes pulse {
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.mask-fade-right {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
     0%, 100% {
-        opacity: 1; transform: scale(1);
+        opacity: 1; 
+        transform: scale(1);
     }
     50% {
-        opacity: .5; transform: scale(1.2);
+        opacity: .5; 
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        justify-items: start;
     }
 }

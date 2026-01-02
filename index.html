@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAZAR-Streetfood</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
     <body class="min-h-screen bg-base-200">
 
-        <div class="navbar bg-base-100 shadow-md sticky top-0 z-50 px-4">
+        <div class="navbar bg-base-100 shadow-xl sticky top-0 z-50 px-4">
             <div class="navbar-start">
                 <a class="btn btn-ghost flex items-center gap-4 px-2 normal-case" href="#">
                 <span class="text-xl">Bazar Streetfood</span>
@@ -50,50 +51,56 @@
             <div class="text-center pt-2"> 
                 <h1 class="text-4xl font-bold mb-0">Speisekarte</h1>
             </div>
-            <div class="flex justify-center gap-2 p-4 overflow-x-auto no-scrollbar">
-                <button class="btn btn-sm btn-outline btn-primary">All</button>
-                <button class="btn btn-sm btn-outline">Vegetarian</button>
-                <button class="btn btn-sm btn-outline">Spicy</button>
-                <button class="btn btn-sm btn-outline">Specials</button>
+            <div class="flex flex-nowrap md:justify-center gap-2 p-5 overflow-x-auto no-scrollbar mask-fade-right">
+                <button class="btn btn-sm btn-outline btn-primary filter-btn whitespace-nowrap">All</button>
+                <button class="btn btn-sm btn-outline filter-btn whitespace-nowrap">Bestseller</button>
+                <button class="btn btn-sm btn-outline filter-btn whitespace-nowrap">Vegetarisch</button>
+                <button class="btn btn-sm btn-outline filter-btn whitespace-nowrap">Authentisch</button>
             </div>
             
-            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                </div>
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
         </div>
         </section>
 
-        <footer class="footer p-10 bg-neutral text-neutral-content mt-10">
-        <nav>
-            <h6 class="footer-title">Kontaktdaten</h6> 
-            <a href="tel:+49123456789" class="link link-hover text-xl font-bold">+49 0203 41787860</a>
-            <p class="mt-2 opacity-70">Hungrig geworden?</p>
-        </nav> 
+        <footer class="bg-neutral text-neutral-content mt-10 p-10">
+            <div class="max-w-7xl mx-auto footer justify-between">
+                <nav>
+                    <h6 class="footer-title">Kontaktdaten</h6> 
+                    <a href="tel:0203 41787860" class="link link-hover text-xl font-bold">+49 0203 41787860</a>
+                    <p class="mt-2 opacity-70">Hungrig geworden?</p>
+                </nav> 
 
-        <nav>
-            <h6 class="footer-title">Adresse</h6>
-            <a href="https://maps.google.com/?cid=4615371239850936622" target="_blank" class="link link-hover">
-            Von-der-Mark-Straße 36,<br/>
-            47137 Duisburg
-            </a>
-            <span class="badge badge-outline mt-2">Open in Google Maps</span>
-        </nav> 
+                <nav>
+                    <h6 class="footer-title">Adresse</h6>
+                    <a href="https://www.google.com/maps/dir//Bazar+Streetfood+Von-der-Mark-Straße+36+47137+Duisburg" target="_blank" class="link link-hover">
+                        Von-der-Mark-Straße 36,<br/>
+                        47137 Duisburg
+                    </a>
+                </nav>
 
-        <nav>
-            <h6 class="footer-title">Öffnungszeiten</h6> 
-            <div class="grid grid-cols-2 gap-x-4 opacity-80">
-            <span>Montag - Samstag:</span> <span>11:30 - 21:00</span>
-            <span>Sunday:</span> <span class="text-error">closed</span>
+                <nav>
+                    <h6 class="footer-title text-sm">Öffnungszeiten</h6> 
+                    <div class="grid grid-cols-2 gap-x-4 opacity-80 text-xs">
+                        <span>Mo. - Sa.:</span> <span>11:30 - 21:00</span>
+                        <span>Sonntag:</span> <span class="text-error">closed</span>
+                    </div>
+                </nav>
+
+                <nav>
+                    <h6 class="footer-title">Social Media</h6> 
+                    <div class="grid grid-flow-col gap-4">
+                        <a href="https://www.instagram.com/explore/locations/219440925150190/bazar-streetfood/" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                    </div>
+                </nav>
+
+                <nav>
+                    <h6 class="footer-title">Rechtliches</h6> 
+                    <a href="html/impressum.html" class="link link-hover opacity-70 text-xs">Impressum & Datenschutz</a>
+                </nav>
+
             </div>
-        </nav>
-
-        <nav>
-            <h6 class="footer-title">Social Media</h6> 
-            <div class="grid grid-flow-col gap-4">
-            <a href="https://www.instagram.com/explore/locations/219440925150190/bazar-streetfood/" class="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            </div>
-        </nav>
         </footer>
         <script src="js/app.js"></script>
     </body>
